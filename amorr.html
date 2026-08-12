@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A nosotros nos faltaban capítulos ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #09090d;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+section {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    overflow: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+}
+
+p {
+    line-height: 1.9;
+    color: #ddd;
+}
+
+/* FONDO ESTRELLAS */
+.stars {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: .6;
+    animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: .2; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* BOTONES GENERALES */
+button {
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+}
+
+.next-btn {
+    margin-top: 35px;
+    padding: 14px 28px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: white;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.next-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* PORTADA */
+.cover {
+    text-align: center;
+    background: radial-gradient(circle at center, rgba(120, 40, 80, 0.3), transparent 60%), #09090d;
+}
+
+.cover-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.small-title {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #c9a6b8;
+    margin-bottom: 20px;
+}
+
+.cover h1 {
+    font-size: clamp(48px, 9vw, 95px);
+    line-height: 1.05;
+    margin-bottom: 30px;
+}
+
+.cover p {
+    max-width: 550px;
+    margin: auto;
+    font-size: 15px;
+}
+
+.heart {
+    color: #d77a9d;
+    font-style: italic;
+}
+
+/* ESTRUCTURA GENERAL */
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.chapter-number {
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #b989a1;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.title {
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.text {
+    max-width: 680px;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* FOTOS */
+.photo {
+    width: 100%;
+    max-width: 600px;
+    height: 380px;
+    margin: 35px auto;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #17171e, #25232a);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* EDADES */
+.ages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+    margin: 45px 0;
+}
+
+.age {
+    text-align: center;
+}
+
+.age-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 75px;
+    color: #d493ad;
+    line-height: 1;
+}
+
+.age-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #aaa;
+    margin-top: 5px;
+}
+
+.age-heart {
+    font-size: 28px;
+}
+
+/* TIMELINE */
+.timeline {
+    max-width: 650px;
+    margin: 40px auto 0;
+    position: relative;
+    text-align: left;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    bottom: 10px;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.event {
+    position: relative;
+    padding-left: 55px;
+    margin-bottom: 35px;
+}
+
+.event::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 6px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: #d484a3;
+    box-shadow: 0 0 12px #d484a3;
+}
+
+.event h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.event p {
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* MAPA Y DISTANCIA */
+.distance {
+    margin: 40px auto;
+    max-width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.city {
+    text-align: center;
+}
+
+.pin {
+    font-size: 32px;
+}
+
+.city-name {
+    margin-top: 8px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.route {
+    height: 1px;
+    flex: 1;
+    background: linear-gradient(90deg, #d484a3, rgba(255,255,255,0.2), #d484a3);
+    position: relative;
+}
+
+.route::after {
+    content: "♥";
+    position: absolute;
+    left: 50%;
+    top: -12px;
+    transform: translateX(-50%);
+    color: #d484a3;
+    font-size: 14px;
+}
+
+/* TARJETAS */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 40px;
+}
+
+.card {
+    padding: 25px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(212, 147, 173, 0.3);
+}
+
+.card-icon {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* CORAZONES INTERACTIVOS */
+.heart-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 650px;
+    margin: 40px auto 0;
+}
+
+.heart-button {
+    min-height: 120px;
+    padding: 15px;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.heart-button .icon {
+    font-size: 32px;
+    transition: transform 0.3s ease;
+}
+
+.heart-button:hover {
+    transform: translateY(-3px);
+    background: rgba(212, 147, 173, 0.1);
+    border-color: rgba(212, 147, 173, 0.4);
+}
+
+.heart-button .hidden-message {
+    font-size: 13px;
+    margin-top: 10px;
+    color: #e5b8cb;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.heart-button.active .hidden-message {
+    opacity: 1;
+    max-height: 100px;
+}
+
+.heart-button.active .icon {
+    transform: scale(0.8);
+}
+
+/* PROXIMOS RECUERDOS Y CAPITULOS */
+.future {
+    display: grid;
+    gap: 15px;
+    max-width: 650px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+
+.future-item {
+    padding: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.025);
+}
+
+.future-item span {
+    color: #b989a1;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.future-item h3 {
+    margin-top: 5px;
+    font-size: 24px;
+}
+
+/* PÁGINA FINAL */
+.final {
+    text-align: center;
+    background: radial-gradient(circle at center, rgba(130, 45, 85, 0.3), transparent 65%), #09090d;
+}
+
+.final .container {
+    max-width: 750px;
+}
+
+.final-heart {
+    font-size: 65px;
+    display: inline-block;
+    animation: heartbeat 2s infinite ease-in-out;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    15% { transform: scale(1.15); }
+    30% { transform: scale(1); }
+    45% { transform: scale(1.08); }
+}
+
+.final h2 {
+    font-size: clamp(45px, 7vw, 80px);
+    margin: 15px 0 25px;
+}
+
+.continue {
+    margin-top: 45px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    color: #d493ad;
+}
+
+/* PREGUNTA FINAL */
+.question {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.question-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.question button {
+    padding: 14px 28px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.question button:hover {
+    background: rgba(212, 147, 173, 0.25);
+    border-color: #d493ad;
+    transform: translateY(-2px);
+}
+
+#answer {
+    display: none;
+    margin-top: 35px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    color: #d493ad;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* EFECTO FADE-IN SCROLL */
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media(max-width: 600px) {
+    section {
+        padding: 60px 20px;
+    }
+
+    .photo {
+        height: 260px;
+    }
+
+    .heart-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .distance {
+        gap: 10px;
+    }
+
+    .age-number {
+        font-size: 55px;
+    }
+
+    .timeline::before {
+        left: 15px;
+    }
+
+    .event {
+        padding-left: 40px;
+    }
+
+    .event::before {
+        left: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ESTRELLAS DE FONDO -->
+<div class="stars" id="stars"></div>
+
+<!-- PORTADA -->
+<section class="cover">
+    <div class="cover-content">
+        <div class="small-title">Una historia sobre nosotros...</div>
+        <h1>
+            A nosotros<br>
+            nos faltaban<br>
+            <span class="heart">capítulos</span>
+        </h1>
+        <p>
+        Un pequeño repaso de nuestra historia, sobre lo que fuimos, lo que somos y todo lo que todavía nos falta por vivir.
+        </p>
+        <button class="next-btn" onclick="scrollToSection('cap1')">
+            Abrir nuestra historia ❤️
+        </button>
+    </div>
+</section>
+
+<!-- CAPÍTULO 01 -->
+<section id="cap1">
+    <div class="container fade">
+        <span class="chapter-number">Capítulo 01</span>
+        <h2 class="title">Nuestra historia<br>donde comenzó ❤️</h2>
+        <div class="text">
+            <p>
+              Nuestra historia comenzó mucho antes de que pudiéramos imaginar todo lo que algún día llegaríamos a vivir juntos.
+            </p>
+            <br>
+            <p>
+              Era de noche cuando nos conocimos. Yo tenía 16 años y tú, Ibedh, tenías 14. Todo comenzó en un juego de Roblox llamado “Escapa del Asesino”, un lugar que en ese momento parecía ser simplemente otro juego más, pero que terminó convirtiéndose en el escenario donde comenzó algo muy bonito.
+            </p>
+            <br>
+            <p>
+             Fuiste tú quien me mandó la solicitud y también quien me habló primero. Y aunque en ese momento ninguno de los dos podía saberlo, esa pequeña solicitud iba a terminar acercándonos muchísimo. Desde el principio tuvimos algo muy bonito: éramos casi iguales, nos entendíamos demasiado bien y, de alguna manera, parecía que ya nos conocíamos de antes. Nos llevábamos de una forma muy natural, sin tener que esforzarnos para encontrar de qué hablar o cómo divertirnos.
+            <br>
+            <br>
+            <p>
+             Empezamos a jugar juntos durante muchísimo tiempo. Entre partidas, conversaciones, risas y todas esas pequeñas tonterías que hacíamos, poco a poco nos fuimos tomando cariño. Podíamos pasar horas juntos simplemente jugando y hablando de cualquier cosa, y creo que lo más bonito era que ninguno necesitaba hacer algo especial para disfrutar del otro. Bastaba con que estuviéramos ahí.
+            </p>
+            <br>
+            <br>
+             <p>
+              Después de un tiempo, decidimos empezar a hablar también por Telegram. Ya no queríamos que nuestras conversaciones se quedaran solamente dentro del juego; queríamos seguir hablando aunque no estuviéramos jugando. Y así, poco a poco, nuestras conversaciones fueron creciendo todavía más. Podíamos pasar muchísimo tiempo hablando, contándonos cosas, riéndonos, haciendo bromas o simplemente acompañándonos.
+            <br>
+            <br>
+            <p>
+              Y después de haber pasado tanto tiempo hablando por mensajes, llegó nuestra primera llamada.
+            </p>
+            <br>
+            <br>
+             <p>
+              Los dos estábamos súper nerviosos. Después de haber pasado tanto tiempo escribiéndonos y jugando juntos, escuchar por primera vez nuestras voces se sentía completamente diferente. No sabíamos muy bien qué decir, probablemente hubo momentos bastante raros y otros que terminaron dándonos mucha risa, pero precisamente por eso fue tan especial. Fue nuestra primera llamada, la primera vez que aquella personita con la que tanto hablábamos dejó de ser solamente alguien detrás de una pantalla y se convirtió en una voz que podíamos escuchar.
+            <br>
+            <br>
+            <p>
+                Y, por supuesto, no podía faltar nuestra parte más absurda y bonita...
+            </p>
+            <br>
+            <br>
+             <p>
+              Según nosotros, nuestra historia realmente comenzó muchísimo antes. Cuando todavía éramos dinosaurios. 🦖❤️
+            <br>
+            <br>
+            <p>
+                Porque en algún punto inventamos nuestra propia versión de nuestra historia, donde Joshua e Ibedh ya se habían encontrado desde aquella época y hasta habían hecho una promesa de estar juntos. Es una de esas cosas que quizá para cualquier otra persona no tendría sentido, pero para nosotros sí. Y creo que eso es justamente lo bonito: tener pequeñas historias, bromas y recuerdos que solamente nosotros entendemos.
+            </p>
+            <br>
+            <br>
+             <p>
+               Pero después de tantos momentos bonitos, de tantas partidas, conversaciones, risas, llamadas y de aquella pequeña promesa que hicimos siendo “dinosaurios”, la vida hizo algo que ninguno de los dos esperaba.
+<p>
+    <br>
+    <br>  
+            <p>
+              Nos alejamos.
+            </p>
+            <br>
+            <br>
+              <p>
+                Nos dejamos de hablar. Y aquella historia que había comenzado una noche cualquiera en un juego de Roblox quedó suspendida, como si alguien hubiera cerrado el libro justo cuando nosotros todavía no sabíamos cuál sería el siguiente capítulo.
+            <p>
+                <br>
+                <br>
+            <p>
+             Y así terminó aquella primera parte de nuestra historia...
+            </p>
+            <br>
+            <br>
+                <p>
+                Joshua por un lado e Ibedh por otro, sin saber que, aunque en ese momento pareciera que nuestros caminos se habían separado, aquella no sería la última vez que nuestras historias volverían a encontrarse.
+            <p>
+                <br>
+                <br>
+            <p>
+              Pero eso...
+            </p>
+            <br>
+            <br>
+                <p>
+                eso todavía no lo sabíamos. ❤️
+            <br>
+            <br>
+            <p>
+               Bueno amor... puede que todo lo último de que nos conocimos cuando éramos dinosaurios, hicimos una promesa de estar juntos y que nuestra historia empezó desde aquella época me lo haya inventado un poquito. 🤭
+            </p>
+            <br>
+        </div>
+        <div class="ages">
+            <div class="age">
+                <div class="age-number">16</div>
+                <div class="age-label">YO</div>
+            </div>
+            <div class="age-heart">❤️</div>
+            <div class="age">
+                <div class="age-number">14</div>
+                <div class="age-label">TÚ</div>
+            </div>
+        </div>
+        <button class="next-btn" onclick="nextSection(this)">
+            Continuar →
+        </button>
+    </div>
+</section>
+
+<!-- CAPÍTULO 02 -->
+<section>
+    <div class="container fade">
+        <span class="chapter-number">Capítulo 02</span>
+        <h2 class="title">Y entonces<br>la vida siguió.</h2>
+        <div class="timeline">
+            <div class="event">
+                <h3>Nos conocimos</h3>
+                <p>Una noche cualquiera, sin buscarlo, nuestras vidas se cruzaron. Éramos dos adolescentes que empezaron a hablar por un juego y que, sin saberlo, estaban a punto de compartir una pequeña parte de sus vidas.</p>
+            </div>
+            <div class="event">
+                <h3>Fuimos amigos</h3>
+                <p>Nos fuimos tomando cariño poco a poco. Compartimos juegos, llamadas, conversaciones, risas y un montón de momentos que en ese entonces parecían simples, pero que hoy forman parte de nuestros primeros recuerdos juntos.</p>
+            </div>
+            <div class="event">
+                <h3>Y después... nos perdimos</h3>
+                <p>La vida siguió avanzando y nuestros caminos terminaron separándose. Dejamos de hablar y, sin darnos cuenta, pasaron los años.</p>
+            </div>
+            <div class="event">
+                <h3>Pasaron los años</h3>
+                <p>Mientras el tiempo pasaba, cada uno siguió su propio camino. Cambiamos, vivimos cosas diferentes y nos convertimos en personas distintas a aquellos dos adolescentes que alguna vez se conocieron.</p>
+            </div>
+            <div class="event">
+                <h3>Pero la historia no había terminado</h3>
+                <p>Porque después de tanto tiempo, cuando parecía que aquella etapa ya había quedado completamente atrás, me encontraste de nuevo.
+
+Y fue curioso... porque aunque habían pasado años, volver a hablar contigo hizo que una parte de aquella vieja conexión volviera a sentirse familiar y bonita.</p>
+            </div>
+            <div class="event">
+                <h3>Y esta vez... ❤️</h3>
+                <p>Esta vez ya no éramos los mismos.
+
+Cuando volvimos a encontrarnos, los dos ya sabíamos que no queríamos que nuestra historia se quedara solamente en aquello que habíamos sido años atrás. Nosotros ya habíamos compartido una parte muy bonita de nuestras vidas y, aunque el tiempo nos había separado, todavía existía algo entre nosotros que nos hacía querer volver a intentarlo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CAPÍTULO 03 -->
+<section>
+    <div class="container fade">
+        <span class="chapter-number">Capítulo 03</span>
+        <h2 class="title">Después de seis años,<br>Volviste a encontrarme.</h2>
+        <div class="photo">
+           <img src="amor.jpg" alt="Nuestro reencuentro">
+        </div>
+        <div class="text">
+            <p>
+                Después de seis años sin saber nada el uno del otro, cuando nuestra historia parecía haber quedado en el pasado, el 7 de marzo de 2026, a las 7:18 p. m., decidiste buscarme.
+            </p>
+            <br>
+            <p>
+           Y quizá para alguien más solo sería una fecha y una hora, pero para mí terminó siendo el momento en el que nuestra historia volvió a comenzar de nuevo.
+            </p>
+             <br>
+              <br>
+               <p>
+               Después de tanto tiempo, volviste a aparecer en mi vida. Ya no éramos aquellos dos adolescentes.
+            </p>
+            <br>
+             <br>
+            <p>
+             Pero ahí estábamos otra vez, hablando después de seis años, sin saber todavía que aquel pequeño mensaje iba a cambiarlo todo. ❤️
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CAPÍTULO 04 -->
+<section>
+    <div class="container fade">
+        <span class="chapter-number">Capítulo 04</span>
+        <h2 class="title">Y entonces<br>apareciste tú.</h2>
+       
+        <div class="text">
+            <p>
+                Después de tantos años, volver a tenerte cerca, aunque fuera a través de una pantalla, se sintió muy bonito. Al principio quizá no imaginábamos cuánto iba a cambiar todo, pero poco a poco comenzamos a recuperar esa confianza que alguna vez tuvimos.
+            </p>
+            <br>
+            <br>
+            <p>
+              Volvieron los mensajes, las llamadas, las risas y esas conversaciones que comenzaban hablando de cualquier tontería y terminaban durando horas.
+            </p>
+            <br>
+             <p>
+               Y sin darnos cuenta, empezamos a hacer espacio el uno para el otro otra vez.
+            </p>
+            <br>
+            <br>
+            <p>
+               Cada día hablábamos un poquito más, nos conocíamos nuevamente y comenzábamos a crear recuerdos nuevos. Ya no se sentía como hablar con alguien del pasado, sino como volver a tenerte presente en mi vida.
+            </p>
+            <br>
+            <p>Y creo que ahí fue cuando empecé a darme cuenta de que volver a reencontrarnos no fue una simple coincidencia. ❤️</p>
+            <p style="font-size:20px; color:#d493ad; margin-top:20px;">
+                Por que te convertiste en alguien que quiero en mi presente y en mi futuro.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CAPÍTULO 05 -->
+<section>
+    <div class="container fade">
+        <span class="chapter-number">Capítulo 05</span>
+        <h2 class="title">Entre CDMX<br>y Colima.</h2>
+        <div class="distance">
+            <div class="city">
+                <div class="pin">📍</div>
+                <div class="city-name">CDMX</div>
+            </div>
+            <div class="route"></div>
+            <div class="city">
+                <div class="pin">📍</div>
+                <div class="city-name">COLIMA</div>
+            </div>
+        </div>
+        <div class="text" style="text-align:center;">
+            <p>
+                Hay aproximadamente 690 kilómetros por carretera entre nosotros, y unos 490 kilómetros en línea recta. No podemos vernos todas las tardes ni compartir físicamente cada detalle de nuestro día a día. Pero aun así, la distancia no es un problema.
+            </p>
+            <br>
+            <p style="font-size:20px; color:#d493ad;">
+               Porque algún día esa distancia desaparecerán y podremos estar juntos sin tener que despedirnos.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CAPÍTULO 06 -->
+<section>
+    <div class="container fade">
+        <span class="chapter-number">Capítulo 06</span>
+        <h2 class="title">Nuestros pequeños momentos.</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">📞</div>
+                <h3>Nuestras llamadas</h3>
+                <p>De mis momentos favoritos del día.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎮</div>
+                <h3>Cuando jugamos</h3>
+                <p>Me divierto muchísimo contigo, me encanta amor.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">💬</div>
+                <h3>Nuestros mensajes</h3>
+                <p>Incluso el mensaje más simple me saca una sonrisa.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">😂</div>
+                <h3>Nuestras risas</h3>
+                <p>Siempre encontramos un motivo para reírnos juntos.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌙</div>
+                <h3>Las noches</h3>
+                <p>Esa sensación de que el tiempo vuela cuando hablamos.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">❤️</div>
+                <h3>Nosotros</h3>
+                <p>Lo más bonito que estamos construyendo día con día.</p>
+            </div>
+        </div>
+     
+    </div>
+</section>
+
+<!-- CAPÍTULO 07 -->
+<section>
+    <div class="container fade">
+        <span class="chapter-number">Capítulo 07</span>
+        <h2 class="title">Lo que amo<br>de nosotros.</h2>
+        <p style="text-align:center; color: #aaa; margin-bottom: 20px;">Toca cada corazón ❤️</p>
+        
+        <div class="heart-grid">
+            <button class="heart-button" onclick="toggleHeart(this)">
+                <span class="icon">❤️</span>
+                <div class="hidden-message">Tu forma de querer</div>
+            </button>
+
+            <button class="heart-button" onclick="toggleHeart(this)">
+                <span class="icon">❤️</span>
+                <div class="hidden-message">Cómo me haces sentir</div>
+            </button>
+
+            <button class="heart-button" onclick="toggleHeart(this)">
+                <span class="icon">❤️</span>
+                <div class="hidden-message">Nuestras conversaciones</div>
+            </button>
+
+            <button class="heart-button" onclick="toggleHeart(this)">
+                <span class="icon">❤️</span>
+                <div class="hidden-message">Tu manera de hacerme sonreír</div>
+            </button>
+
+            <button class="heart-button" onclick="toggleHeart(this)">
+                <span class="icon">❤️</span>
+                <div class="hidden-message">Que sigamos eligiéndonos</div>
+            </button>
+
+            <button class="heart-button" onclick="toggleHeart(this)">
+                <span class="icon">❤️</span>
+                <div class="hidden-message">Todo lo que nos falta por vivir</div>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- CAPÍTULO 08 -->
+<section>
+    <div class="container fade">
+        <span class="chapter-number">Capítulo 08</span>
+        <h2 class="title">Nuestra historia<br>no es perfecta.</h2>
+        <div class="text">
+            <p>
+               Puede que no todo sea perfecto, y antes quizá yo no entendía del todo eso.
+            </p>
+            <br>
+            <p>
+              Yo pensaba que si nos queríamos de verdad, todo tendría que salir bien, que no deberíamos tener problemas ni momentos difíciles. Pero entendí que no siempre será así.
+            </p>
+            <br>
+             <p>
+              He aprendido que habrá días buenos y otros no tanto, momentos en los que tendremos que hablar, entendernos y aprender de lo que nos pase. Y estoy dispuesto a aprenderlo contigo.
+            </p>
+            <br>
+            <p>
+               No quiero que nuestra historia sea perfecta, quiero que sea real. Quiero que podamos equivocarnos, aprender, crecer y mejorar juntos.
+            </p>
+            <br>
+             <p>
+              Porque sé que todavía tenemos mucho por aprender, pero también sé que quiero seguir aprendiendo contigo. ❤️
+            </p>
+            <br>
+            
+            <p style="font-size:20px; color:#d493ad;">
+                Incluso en los días difíciles, sigues siendo la persona con la que quiero construir.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CAPÍTULO 09 -->
+<section>
+    <div class="container fade">
+        <span class="chapter-number">Capítulo 09</span>
+        <h2 class="title">Recuerdos que<br>todavía nos esperan.</h2>
+        <div class="future">
+            <div class="future-item">
+                <span>PRÓXIMO PASO</span>
+                <h3>🤍 Nuestro primer abrazo</h3>
+            </div>
+            <div class="future-item">
+                <span>PRÓXIMO PASO</span>
+                <h3>📸 Nuestra primera foto juntos</h3>
+            </div>
+            <div class="future-item">
+    <span>PRÓXIMO PASO</span>
+    <h3>💍 Nuestra boda</h3>
+</div>
+            <div class="future-item">
+                <span>PRÓXIMO PASO</span>
+                <h3>✈️ Nuestro primer viaje</h3>
+            </div>
+            <div class="future-item">
+                <span>PRÓXIMO PASO</span>
+                <h3>🌎 Conocer nuevos lugares juntos</h3>
+            </div>
+        </div>
+        <p style="text-align:center; margin-top:30px; color: #bbb;">
+            Y me emociona saber todo lo que viene.
+        </p>
+    </div>
+</section>
+
+<!-- CAPÍTULO 10 / FINAL -->
+<section class="final">
+    <div class="container fade">
+        <span class="chapter-number">Capítulo 10</span>
+        <div class="final-heart">❤️</div>
+        <div class="small-title">11 de abril · 11 de agosto</div>
+        <h2>4 meses contigo.</h2>
+        <div class="text">
+            <p>
+                Cuatro meses pueden parecer poco en tiempo, pero pensando en el camino que recorrimos para volver a encontrarnos, me parece un regalo poder llamarte mi amor hoy.
+            </p>
+            <br>
+            <p>
+                Gracias por cada llamada, mensaje, risa y momento compartido.
+            </p>
+            <p style="font-size:20px; color:#d493ad; margin-top: 15px;">
+                Gracias por volver a formar parte de mi vida.
+            </p>
+        </div>
+
+        <div class="continue">
+            Y este apenas es el comienzo.
+        </div>
+
+        <div class="question">
+            <p style="font-size: 18px;">¿Seguimos escribiendo esta historia?</p>
+            <div class="question-buttons" id="q-buttons">
+            <button onclick="answerYes()" style="display: none;">Sí ❤️</button>
+                <button onclick="answerYes()">Por supuesto ❤️</button>
+            </div>
+            <div id="answer">
+                Entonces nos vemos en el siguiente capítulo. ❤️
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+// Generar Estrellas
+const starsContainer = document.getElementById("stars");
+for (let i = 0; i < 100; i++) {
+    const star = document.createElement("div");
+    star.className = "star";
+    star.style.left = `${Math.random() * 100}%`;
+    star.style.top = `${Math.random() * 100}%`;
+    star.style.animationDelay = `${Math.random() * 3}s`;
+    star.style.opacity = Math.random() * 0.7 + 0.3;
+    starsContainer.appendChild(star);
+}
+
+// Scroll Observador
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
+    });
+}, { threshold: 0.15 });
+
+document.querySelectorAll(".fade").forEach(el => observer.observe(el));
+
+// Funciones de Navegación
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+}
+
+function nextSection(button) {
+    const current = button.closest("section");
+    const next = current.nextElementSibling;
+    if (next) {
+        next.scrollIntoView({ behavior: "smooth" });
+    }
+}
+
+// Interacción de Corazones
+function toggleHeart(button) {
+    button.classList.toggle("active");
+}
+
+// Respuesta Final
+function answerYes() {
+    document.getElementById("q-buttons").style.display = "none";
+    const answer = document.getElementById("answer");
+    answer.style.display = "block";
+}
+
+// Navegación opcional con teclado
+document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown") {
+        window.scrollBy({ top: window.innerHeight * 0.8, behavior: "smooth" });
+    } else if (e.key === "ArrowUp") {
+        window.scrollBy({ top: -window.innerHeight * 0.8, behavior: "smooth" });
+    }
+});
+</script>
+
+</body>
+</html>
